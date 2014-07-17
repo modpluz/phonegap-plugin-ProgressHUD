@@ -1,4 +1,4 @@
-phonegap-plugin-ProgressHUD
+phonegap-plugin-ProgressHUD Determinate
 ============================
 
 Phonegap ProgressHUD plugin
