@@ -10,6 +10,10 @@ var ProgressHUD = {
     	var _message = ( message || 'Chargement' );
         cordova.exec(function () { }, function () { }, "ProgressHUD", "show", [ _message ]);
     },
+    setValue: function ( value ) {
+    	var _value = ( value || 0 );
+        cordova.exec(function () { }, function () { }, "ProgressHUD", "setValue", [ _value ]);
+    },
     hide: function () {
         cordova.exec(function () { }, function () { }, "ProgressHUD", "hide", []);
     }
