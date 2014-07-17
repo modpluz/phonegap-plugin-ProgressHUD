@@ -16,13 +16,14 @@
 - (void)show:(CDVInvokedUrlCommand*)command
 {
 	NSString* message = [command argumentAtIndex:0];
+	NSString* messageLong = [command argumentAtIndex:0];
 
 	self.progressHUD = nil;
 	self.progressHUD = [MBProgressHUD showHUDAddedTo:self.webView.superview animated:YES];
 	self.progressHUD.mode = MBProgressHUDModeAnnularDeterminate;
 	self.progressHUD.progress = 50;
     self.progressHUD.labelText = message;
-    self.progressHUD.detailsLabelText = message;
+    self.progressHUD.detailsLabelText = messageLong;
     CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@""];
     [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
 }
