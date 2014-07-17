@@ -27,6 +27,21 @@
     [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
 }
 
+- (void)setValue:(CDVInvokedUrlCommand*)command
+{
+	NSInt* value = [command argumentAtIndex:0];
+	
+	if (!self.progressHUD) {
+		CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR];
+		[self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+		return;
+	}
+	[self.progressHUD progress:50];
+    CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@""];
+    [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+}
+
+
 - (void)hide:(CDVInvokedUrlCommand*)command
 {
 	if (!self.progressHUD) {
