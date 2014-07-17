@@ -2,6 +2,8 @@ phonegap-plugin-ProgressHUD
 ============================
 
 Phonegap ProgressHUD plugin
+This plugin is a determinate progress bar.  It starts at 0 and goes to 1.
+You use setValue to chagne the value from 0 to 1
 
 ## Platforms ##
 
