@@ -37,7 +37,7 @@
 		[self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
 		return;
 	}
-	self.progressHUD.progress = progress;
+	self.progressHUD.progress = progress.floatValue;
     CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@""];
     [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
 }
