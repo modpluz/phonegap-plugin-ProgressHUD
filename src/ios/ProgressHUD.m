@@ -30,7 +30,7 @@
 
 - (void)setValue:(CDVInvokedUrlCommand*)command
 {
-	float progress = [command argumentAtIndex:0];
+	NSString* progress = [command argumentAtIndex:0];
 	if (!self.progressHUD) {
 		CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR];
 		[self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
