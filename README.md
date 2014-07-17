@@ -12,12 +12,18 @@ Phonegap ProgressHUD plugin
 ### show ###
 ```js
 var message = "...";
-ProgressHUD.show(message);
+var longMessage = "... ... ...";
+ProgressHUD.show(message, longMessage);
 ```
 
 ### hide ###
 ```js
 ProgressHUD.hide();
+```
+
+### set value ###
+```js
+ProgressHUD.setValue(.5);
 ```
 
 ## Licence ##
