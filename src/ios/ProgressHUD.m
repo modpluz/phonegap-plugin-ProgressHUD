@@ -20,7 +20,7 @@
 
 	self.progressHUD = nil;
 	self.progressHUD = [MBProgressHUD showHUDAddedTo:self.webView.superview animated:YES];
-	self.progressHUD.mode = MBProgressHUDModeAnnularDeterminate;
+	self.progressHUD.mode = MBProgressHUDModeDeterminateHorizontalBar;
 	self.progressHUD.progress = 0;
     self.progressHUD.labelText = message;
     self.progressHUD.detailsLabelText = messageLong;
