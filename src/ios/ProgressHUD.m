@@ -30,13 +30,12 @@
 
 - (void)setValue:(CDVInvokedUrlCommand*)command
 {
-	NSInteger* aValue = [command argumentAtIndex:0];
 	if (!self.progressHUD) {
 		CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR];
 		[self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
 		return;
 	}
-	[self.progressHUD progress:aValue];
+	[self.progressHUD hide:YES];
     CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@""];
     [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
 }
