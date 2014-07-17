@@ -19,8 +19,10 @@
 
 	self.progressHUD = nil;
 	self.progressHUD = [MBProgressHUD showHUDAddedTo:self.webView.superview animated:YES];
-	self.progressHUD.mode = MBProgressHUDModeIndeterminate;
+	self.progressHUD.mode = MBProgressHUDModeAnnularDeterminate;
+	self.progressHUD.progress = 50;
     self.progressHUD.labelText = message;
+    self.progressHUD.detailsLabelText = message;
     CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@""];
     [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
 }
