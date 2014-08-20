@@ -6,10 +6,11 @@
 //  MIT Licensed
 
 var ProgressHUD = {
-    show: function ( message, messageLong ) {
+    show: function ( message, messageLong, determined ) {
     	var _message = ( message || 'Loading' );
     	var _messageLong = ( messageLong || 'Please Wait' );
-        cordova.exec(function () { }, function () { }, "ProgressHUD", "show", [ _message, _messageLong ]);
+    	determined = !!determined;
+        cordova.exec(function () { }, function () { }, "ProgressHUD", "show", [ _message, _messageLong, determined ]);
     },
     setValue: function ( value ) {
     	var _value = ( value || 0 );
