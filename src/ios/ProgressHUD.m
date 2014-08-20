@@ -17,15 +17,21 @@
 {
 	NSString* message = [command argumentAtIndex:0];
 	NSString* messageLong = [command argumentAtIndex:1];
+	BOOL determined = [command argumentAtIndex:2];
 
 	self.progressHUD = nil;
 	self.progressHUD = [MBProgressHUD showHUDAddedTo:self.webView.superview animated:YES];
-	self.progressHUD.mode = MBProgressHUDModeDeterminateHorizontalBar;
+	if(determined) {
+		self.progressHUD.mode = MBProgressHUDModeDeterminateHorizontalBar;	
+	} else {
+		self.progressHUD.mode =	MBProgressHUDModeIndeterminate;
+	}
+	
 	self.progressHUD.progress = 0;
-    self.progressHUD.labelText = message;
-    self.progressHUD.detailsLabelText = messageLong;
-    CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@""];
-    [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+    	self.progressHUD.labelText = message;
+    	self.progressHUD.detailsLabelText = messageLong;
+    	CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@""];
+    	[self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
 }
 
 - (void)setValue:(CDVInvokedUrlCommand*)command
