@@ -1,0 +1,23 @@
+{
+  "name": "phonegap-plugin-progresshud",
+  "version": "2.0.0",
+  "description": "phonegap-plugin-ProgressHUD Determinate created by OptikalFx",
+  "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/modpluz/phonegap-plugin-ProgressHUD.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/modpluz/phonegap-plugin-ProgressHUD/issues"
+  },
+  "homepage": "https://github.com/modpluz/phonegap-plugin-ProgressHUD#readme"
+}
