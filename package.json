@@ -11,13 +11,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/modpluz/phonegap-plugin-ProgressHUD.git"
+    "url": "git+https://github.com/optikalefx/phonegap-plugin-ProgressHUD.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/modpluz/phonegap-plugin-ProgressHUD/issues"
+    "url": "https://github.com/optikalefx/phonegap-plugin-ProgressHUD/issues"
   },
-  "homepage": "https://github.com/modpluz/phonegap-plugin-ProgressHUD#readme"
+  "homepage": "https://github.com/optikalefx/phonegap-plugin-ProgressHUD#readme"
 }
